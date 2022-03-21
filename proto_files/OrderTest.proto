@@ -1,0 +1,16 @@
+syntax = "proto3";
+package OrderTest;
+
+option optimize_for = SPEED;
+
+message BoolResult {
+  bool IsCompleted = 1;
+}
+
+message IdsModel {
+  repeated int64 Id = 1;
+}
+
+service OrderTestService {
+  rpc RunTests(IdsModel) returns (BoolResult) {}
+}

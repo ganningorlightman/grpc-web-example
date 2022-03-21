@@ -1,0 +1,11 @@
+
+node_modules/protoc/protoc/bin
+
+protoc -I=D:/GitHub/practice/proto_files helloworld.proto SyncConductor.proto --plugin=protoc-gen-grpc-web=D:/GitHub/practice/node_modules/protoc-gen-grpc-web/bin/protoc-gen-grpc-web.exe --js_out=import_style=commonjs:../../out_files --grpc-web_out=import_style=typescript,mode=grpcwebtext:../../out_files
+
+
+import_style=commonjs
+import_style=commonjs+dts
+import_style=typescript
+
+docker run -d -v D:\GitHub\grpc-web-example\envoy.yaml:/etc/envoy/envoy.yaml:ro -p 8080:8080 -p 9901:9901 envoyproxy/envoy:v1.20.0
